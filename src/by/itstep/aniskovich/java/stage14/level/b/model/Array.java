@@ -4,6 +4,10 @@ import static java.lang.Math.*;
 
 public class Array {
     public static int countIndexOverNum(int[] array, int number) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -16,6 +20,10 @@ public class Array {
     }
 
     public static int countIndexUnderNum(int[] array, int number) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -28,6 +36,10 @@ public class Array {
     }
 
     public static int countIndexEqualNum(int[] array, int number) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -40,6 +52,10 @@ public class Array {
     }
 
     public static int countIndexUnequalNum(int[] array, int number) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -52,6 +68,10 @@ public class Array {
     }
 
     public static int countIndexDivisibleNum(int[] array, int number) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -64,6 +84,10 @@ public class Array {
     }
 
     public static int countIndexUndivisibleNum(int[] array, int number) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -76,6 +100,10 @@ public class Array {
     }
 
     public static int countIndexAbsOverNum(int[] array, int number) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -88,6 +116,10 @@ public class Array {
     }
 
     public static int countIndexAbsEqualNum(int[] array, int number) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -98,6 +130,4 @@ public class Array {
 
         return count;
     }
-
-
 }
