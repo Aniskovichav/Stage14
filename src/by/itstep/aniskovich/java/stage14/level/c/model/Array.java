@@ -106,8 +106,8 @@ public class Array {
         avg = avg / array.length;
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == avg - deviation
-                    || array[i] == avg + deviation) {
+            if (array[i] >= avg - deviation
+                    || array[i] <= avg + deviation) {
                 count++;
             }
         }
@@ -131,8 +131,8 @@ public class Array {
         avg_geom = Math.pow(avg_geom, 1.0 / array.length);
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == avg_geom - deviation
-                    || array[i] == avg_geom + deviation ) {
+            if (array[i] >= avg_geom - deviation
+                    || array[i] <= avg_geom + deviation) {
                 count++;
             }
         }
