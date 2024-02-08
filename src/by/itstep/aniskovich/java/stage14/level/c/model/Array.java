@@ -107,7 +107,7 @@ public class Array {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] >= avg - deviation
-                    || array[i] <= avg + deviation) {
+                    && array[i] <= avg + deviation) {
                 count++;
             }
         }
@@ -132,7 +132,7 @@ public class Array {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] >= avg_geom - deviation
-                    || array[i] <= avg_geom + deviation) {
+                    && array[i] <= avg_geom + deviation) {
                 count++;
             }
         }
