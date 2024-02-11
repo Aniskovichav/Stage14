@@ -1,7 +1,7 @@
 package by.itstep.aniskovich.java.stage14.level.a.model;
 
 public class Array {
-    public static int countNonzeroIndex(int[] array) {
+    public static int countNonzeroElement(int[] array) {
         if (array == null || array.length == 0) {
             return -1;
         }
@@ -16,7 +16,7 @@ public class Array {
         return count;
     }
 
-    public static int countEvenIndex(int[] array) {
+    public static int countEvenElement(int[] array) {
         if (array == null || array.length == 0) {
             return -1;
         }
@@ -32,7 +32,7 @@ public class Array {
         return count;
     }
 
-    public static int countPositiveIndex(int[] array) {
+    public static int countPositiveElement(int[] array) {
         if (array == null || array.length == 0) {
             return -1;
         }
@@ -48,7 +48,7 @@ public class Array {
         return count;
     }
 
-    public static int countZeroIndex(int[] array) {
+    public static int countZeroElement(int[] array) {
         if (array == null || array.length == 0) {
             return -1;
         }
@@ -64,7 +64,7 @@ public class Array {
         return count;
     }
 
-    public static int countOddIndex(int[] array) {
+    public static int countOddElement(int[] array) {
         if (array == null || array.length == 0) {
             return -1;
         }
@@ -80,7 +80,7 @@ public class Array {
         return count;
     }
 
-    public static int countNegativeIndex(int[] array) {
+    public static int countNegativeElement(int[] array) {
         if (array == null || array.length == 0) {
             return -1;
         }
