@@ -8,10 +8,10 @@ public class Array {
 
         int count = 0;
 
-        int avg = (int) avgIndexArray(array);
+        double avg = avgIndexArray(array);
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > avg) {
+            if ((double) array[i] > avg) {
                 count++;
             }
         }
@@ -19,7 +19,7 @@ public class Array {
         return count;
     }
 
-    private static double avgIndexArray(int[] array) {
+    public static double avgIndexArray(int[] array) {
         double avg = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -37,10 +37,10 @@ public class Array {
 
         int count = 0;
 
-        int avgGeom = (int) avgGeomIndexArray(array);
+        double avgGeom = avgGeomIndexArray(array);
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > avgGeom) {
+            if ((double) array[i] > avgGeom) {
                 count++;
             }
         }
@@ -48,7 +48,7 @@ public class Array {
         return count;
     }
 
-    private static double avgGeomIndexArray(int [] array) {
+    public static double avgGeomIndexArray(int[] array) {
         double avgGeom = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -67,10 +67,10 @@ public class Array {
 
         int count = 0;
 
-        int avg = (int) avgIndexArray(array);
+        double avg = avgIndexArray(array);
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < avg) {
+            if ((double) array[i] < avg) {
                 count++;
             }
         }
@@ -85,10 +85,10 @@ public class Array {
 
         int count = 0;
 
-        int avgGeom = (int) avgGeomIndexArray(array);
+        double avgGeom = avgGeomIndexArray(array);
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < avgGeom) {
+            if ((double) array[i] < avgGeom) {
                 count++;
             }
         }
@@ -104,11 +104,11 @@ public class Array {
 
         int count = 0;
 
-        int avg = (int) avgIndexArray(array);
+        double avg = avgIndexArray(array);
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] >= avg - deviation
-                    && array[i] <= avg + deviation) {
+            if ((double) array[i] >= avg - deviation
+                    && (double) array[i] <= avg + deviation) {
                 count++;
             }
         }
@@ -123,17 +123,12 @@ public class Array {
         }
 
         int count = 0;
-        double avg_geom = array[0];
 
-        for (int i = 1; i < array.length; i++) {
-            avg_geom *= array[i];
-        }
-
-        avg_geom = Math.pow(avg_geom, 1.0 / array.length);
+        double avgGeom = avgGeomIndexArray(array);
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] >= avg_geom - deviation
-                    && array[i] <= avg_geom + deviation) {
+            if ((double) array[i] >= avgGeom - deviation
+                    && (double) array[i] <= avgGeom + deviation) {
                 count++;
             }
         }
