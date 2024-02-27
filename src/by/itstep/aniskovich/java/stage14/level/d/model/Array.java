@@ -7,16 +7,19 @@ public class Array {
         int minIndex = findMinElement(array);
         int maxIndex = findMaxElement(array);
 
-        if (minIndex == -1 || maxIndex == -1) {
+        if (minIndex == -1 || maxIndex == -1 || minIndex == maxIndex) {
             return -1;
         }
 
-        minIndex = minIndex > maxIndex ? maxIndex : minIndex;
-        maxIndex = minIndex > maxIndex ? minIndex : maxIndex;
+        if (minIndex > maxIndex) {
+            int tempIndex = minIndex;
+            minIndex = maxIndex;
+            maxIndex = tempIndex;
+        }
 
         double mul = 1.0;
 
-        if (minIndex == maxIndex || minIndex + 1 == maxIndex) {
+        if (minIndex + 1 == maxIndex) {
             mul = 0.0;
         } else {
             for (int i = minIndex + 1; i < maxIndex; i++) {
